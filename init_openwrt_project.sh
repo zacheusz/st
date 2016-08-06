@@ -9,7 +9,9 @@ echo src-git linkit https://github.com/MediaTek-Labs/linkit-smart-7688-feed.git 
 sed -i -e 's/openwrt\/packages\.git/zacheusz\/packages\.git/g' feeds.conf
 scripts/feeds update -a
 scripts/feeds install -a -p packages
-make menuconfig
+rm .config
+wget https://raw.githubusercontent.com/zacheusz/st/master/.config
+make oldconfig
 make -ij V=s tools/install
 make -ij V=s toolchain/install
 
