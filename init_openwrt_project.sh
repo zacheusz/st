@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    exit
+fi
 echo "cloning openwrt into $1"
 git clone git://git.openwrt.org/15.05/openwrt.git $1
 cd $1
