@@ -8,7 +8,7 @@ fi
 echo "cloning openwrt into $1"
 git clone git://git.openwrt.org/15.05/openwrt.git $1
 cd $1
-git reset --hard 17185dc391d3dc67ebd574827aeca32181c46257
+git reset --hard df520761523ad7e6d91841b6b8ea368e255c0baa
 echo "preparing feeds.conf"
 cp feeds.conf.default feeds.conf
 echo src-git linkit https://github.com/MediaTek-Labs/linkit-smart-7688-feed.git >> feeds.conf
