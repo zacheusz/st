@@ -7,6 +7,7 @@ if [ $# -eq 0 ]
 fi
 echo "cloning openwrt into $1"
 git clone git://git.openwrt.org/15.05/openwrt.git $1
+git reset --hard 17185dc391d3dc67ebd574827aeca32181c46257
 cd $1
 echo "preparing feeds.conf"
 cp feeds.conf.default feeds.conf
